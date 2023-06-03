@@ -1,7 +1,15 @@
-import React from 'react'
-import { ArrowLeftOnRectangleIcon, TruckIcon } from '@heroicons/react/24/solid'
+import React from "react"
+import { ArrowLeftOnRectangleIcon } from "@heroicons/react/24/solid"
+import { SidebarLink } from "@/Components"
+import Link from "next/link"
+import { useRouter } from "next/router"
 
-export const Sidebar = () => {
+export const Sidebar = (props) => {
+
+    const {  } = props
+
+    const { pathname } = useRouter()
+
     return (
         <div className="relative bg-yellow-50 overflow-hidden max-h-screen">
             <div className="fixed inset-y-0 left-0 bg-white shadow-md max-h-screen w-60">
@@ -12,24 +20,16 @@ export const Sidebar = () => {
                         </div>
                         <div className="p-4">
                             <ul className="space-y-1">
-                                <li>
-                                    <a href="#" className="flex items-center bg-orange-100 gap-2 rounded-md font-bold text-sm text-primary-1 py-3 px-4 outline-none hover:bg-orange-100">
-                                        <TruckIcon className="w-6 h-6" />
-                                        Vehicles
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" className="flex items-center gap-2 rounded-md font-bold text-sm text-zinc-800 py-3 px-4 outline-none hover:bg-orange-100">
-                                        <TruckIcon className="w-6 h-6" />
-                                        Vehicles
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" className="flex items-center gap-2 rounded-md font-bold text-sm text-zinc-800 py-3 px-4 outline-none hover:bg-orange-100">
-                                        <TruckIcon className="w-6 h-6" />
-                                        Vehicles
-                                    </a>
-                                </li>
+                                {
+                                    SidebarLink.map((e, i) => (
+                                        <li>
+                                            <Link href={e.path} className={(pathname == e.path ? "bg-orange-100 text-primary-1" : "bg-transparent text-zinc-800") + " flex items-center bg-orange-100 gap-2 rounded-md font-bold text-sm text-primary-1 py-3 px-4 outline-none hover:bg-orange-100"}>
+                                                <e.icon className="w-6 h-6" />
+                                                {e.name}
+                                            </Link>
+                                        </li>
+                                    ))
+                                }
                             </ul>
                         </div>
                     </div>

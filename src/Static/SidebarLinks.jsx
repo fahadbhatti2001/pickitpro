@@ -1,17 +1,19 @@
-const SidebarLink = [
+import {  TruckIcon, AdjustmentsHorizontalIcon, ChatBubbleLeftRightIcon } from "@heroicons/react/24/solid"
+
+export const SidebarLink = [
     {
         name: "Home",
         path: "/home",
-        icon: "",
+        icon: AdjustmentsHorizontalIcon,
     },
     {
         name: "Vehicles",
         path: "/vehicles",
-        icon: "",
+        icon: TruckIcon,
     },
     {
         name: "Feedbacks",
         path: "/feedbacks",
-        icon: "",
+        icon: ChatBubbleLeftRightIcon,
     },
 ]
