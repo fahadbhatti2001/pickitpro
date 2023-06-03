@@ -1,4 +1,4 @@
-import { Login, Sidebar } from '@/Components'
+import { Login } from '@/Components'
 import React from 'react'
 
 export default function Home() {
