@@ -17,6 +17,7 @@
     "@heroicons/react": "^2.0.18",
     "firebase": "^9.22.1",
     "immer": "^10.0.2",
+    "moment": "^2.29.4",
     "next": "^13.4.4",
     "react-hook-form": "^7.44.3",
     "sweetalert2": "^11.7.10"

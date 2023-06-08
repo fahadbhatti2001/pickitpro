@@ -1,10 +1,13 @@
-import { Sidebar } from '@/Components'
+import { DashboardLayout, Sidebar } from '@/Components'
 import React from 'react'
 
 export default function Admin() {
   return (
     <>
       <Sidebar />
+      <DashboardLayout>
+        Home
+      </DashboardLayout>
     </>
   )
 }
