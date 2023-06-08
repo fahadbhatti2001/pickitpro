@@ -9,6 +9,11 @@ export const Sidebar = (props) => {
     const {  } = props
 
     const { pathname } = useRouter()
+    const router = useRouter()
+
+    const logout = () => {
+        router.push("/")
+    }
 
     return (
         <div className="relative bg-yellow-50 overflow-hidden max-h-screen">
@@ -22,7 +27,7 @@ export const Sidebar = (props) => {
                             <ul className="space-y-1">
                                 {
                                     SidebarLink.map((e, i) => (
-                                        <li>
+                                        <li key={i}>
                                             <Link href={e.path} className={(pathname == e.path ? "bg-orange-100 text-primary-1" : "bg-transparent text-zinc-800") + " flex items-center bg-orange-100 gap-2 rounded-md font-bold text-sm text-primary-1 py-3 px-4 outline-none hover:bg-orange-100"}>
                                                 <e.icon className="w-6 h-6" />
                                                 {e.name}
@@ -34,7 +39,7 @@ export const Sidebar = (props) => {
                         </div>
                     </div>
                     <div className="p-4">
-                        <button onClick={() => ""} type="button" href="#" className="w-full flex items-center gap-2 rounded-md font-bold text-sm text-zinc-800 py-3 px-4 outline-none hover:bg-orange-100">
+                        <button onClick={() => logout()} type="button" href="#" className="w-full flex items-center gap-2 rounded-md font-bold text-sm text-zinc-800 py-3 px-4 outline-none hover:bg-orange-100">
                             <ArrowLeftOnRectangleIcon className="w-6 h-6" />
                             Logout
                         </button>

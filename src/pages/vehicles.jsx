@@ -1,12 +1,12 @@
-import { DashboardLayout, Sidebar } from '@/Components'
+import { DashboardLayout, Sidebar, Vehicles } from '@/Components'
 import React from 'react'
 
-export default function Vehicles() {
+export default function vehicles() {
     return (
         <>
             <Sidebar />
             <DashboardLayout>
-                Vehicles
+                <Vehicles />
             </DashboardLayout>
         </>
     )

@@ -1,9 +1,20 @@
+// General Components
 export { Spinner } from "./General/Spinner";
-export { Login } from "./Public/Login";
 export { Header } from "./General/Header";
 export { Navbar } from "./General/Navbar";
+
+// Dashboard Components
+export { DashboardLayout } from "./Dashboard/DashboardLayout";
+export { Vehicles } from "./Dashboard/Vehicles";
+export { Feedback } from "./Dashboard/Feedback";
 export { Sidebar } from "./Dashboard/Sidebar";
 export { Home } from "./Dashboard/Home";
-export { DashboardLayout } from "./Dashboard/DashboardLayout";
+
+// Public Components
+export { Login } from "./Public/Login";
+
+// Static Components
 export { SidebarLink } from "@/Static/SidebarLinks";
+
+// Auth Components
 export { UseUserAuth, UserAuthContextProvider } from "../Context/UserAuth";
